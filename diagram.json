@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "author": "sujid",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "board-ssd1306", "id": "oled1", "top": -120, "left": 80, "attrs": {} },
+    { "type": "wokwi-photoresistor-sensor", "id": "ldr1", "top": 120, "left": 80, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:GND.1", "oled1:GND", "black", [ "v0" ] ],
+    [ "esp:3V3", "oled1:VCC", "red", [ "v0" ] ],
+    [ "esp:D21", "oled1:SDA", "blue", [ "v0" ] ],
+    [ "esp:D22", "oled1:SCL", "yellow", [ "v0" ] ],
+    [ "esp:GND.2", "ldr1:GND", "black", [ "v0" ] ],
+    [ "esp:3V3", "ldr1:VCC", "red", [ "v0" ] ],
+    [ "esp:D34", "ldr1:AO", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
